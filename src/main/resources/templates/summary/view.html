@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글보기</title>
+    <link rel="favicon_io" th:href="@{/favicon_io/favicon.ico}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{../css/stylesheet.css}"/>
+</head>
+<body>
+<th:block th:insert="~{/fragments/nav :: navFragment}"></th:block>
+    <div class="articlearea">
+        <h2>2023년 4월 5일에 작성했어요.</h2>
+        <div class="article">
+            <div class="arc_title">"충격, 한지연씨 금요일날 공부를 안 해"</div>
+            <hr/>
+            <div class="arc_contents">
+                2023년 4월 7일 오후 한지연씨는 공부를 하다 말고 로또를 사러 나간 뒤 그대로 
+                코인 노래방으로 직행한 것이 확인되었다. 
+                <br/>
+            </div>
+        </div>
+        <div class="btn_area">
+            <button class="myButton">수정</button>
+            <button class="myButton">삭제</button>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글보기</title>
+    <link rel="favicon_io" th:href="@{/favicon_io/favicon.ico}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{../css/stylesheet.css}"/>
+</head>
+<body>
+<th:block th:insert="~{/fragments/nav :: navFragment}"></th:block>
+    <div class="articlearea">
+        <h2>기사를 읽고 직접 정리해보아요.</h2>
+        <div class="article">
+            <form>
+                <div class="arc_title">
+                    <input type="text" required placeholder="제목을 입력하세요">
+                </div>
+                <hr/>
+                <div class="arc_contents">
+                    <input type="text" class="height35" required placeholder="내용을 입력하세요">
+                </div>
+            </div>
+            <div class="btn_area">
+                <button class="myButton" type="submit">작성</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

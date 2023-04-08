@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="kos">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지</title>
+    <link rel="favicon_io" th:href="@{/favicon_io/favicon.ico}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{../css/stylesheet.css}"/>
+</head>
+<body>
+<th:block th:insert="~{/fragments/nav :: navFragment}"></th:block>
+    <div class="articlearea">
+        <h2>내가 요약한 기사들</h2>
+        <div class="article height83 over display">
+            <div class="board">
+                <div class="list_contents" onclick="">
+                    요약날짜: <br/>
+                    기사제목: <br/>
+                    요약내용: <br/>
+                </div>
+                </div>
+            </div>
+
+</div>
+</body>
+</html>
