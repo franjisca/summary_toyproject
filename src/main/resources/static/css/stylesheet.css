@@ -26,12 +26,12 @@ input {
 
 
 .myButton {
-	background-color:#447dc7;
+    background-color:#447dc7;
     border: none;
     border-radius: 5px;
-	cursor:pointer;
-	color:#ffffff;
-	font-size:1.1em;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:1.1em;
     font-family: 'Gowun Dodum', sans-serif;
     margin-right:1%;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
@@ -39,7 +39,7 @@ input {
     min-height: 4vh;
 }
 .myButton:hover {
-	background-color:#004bac;
+    background-color:#004bac;
 }
 
 
@@ -133,11 +133,11 @@ input {
 /* custom*/
 
 .height83 {
-    height: 83vh !important;  
+    height: 83vh !important;
 }
 
 .height35 {
-    height: 35vh !important;  
+    height: 35vh !important;
 }
 
 .over {
@@ -152,6 +152,41 @@ input {
 
 .margin1 {
     margin: 0 0 0 0;
+}
+
+.marginR1 {
+    margin: 1% 1% 1% 1%;
+}
+
+/* 알림창 */
+
+.alertarea{
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert{
+    border: 1px solid rgb(237, 237, 237);
+    border-radius: 5px;
+    width: 25vw;
+    height: 25vh;
+    background-color: #ffffff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flow-root;
+
+}
+
+.message{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.msgtxt{
+    width: 20vw;
 }
 
 

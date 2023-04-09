@@ -1,0 +1,26 @@
+<html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>alert</title>
+  <link rel="favicon_io" th:href="@{/favicon_io/favicon.ico}" />
+  <link rel="stylesheet" type="text/css" th:href="@{../css/stylesheet.css}"/>
+</head>
+<body>
+<th:block th:insert="~{/fragments/nav :: navFragment}"></th:block>
+<div class="alertarea">
+  <div class="alert">
+    <div class="message">
+      <div class="msgtxt">
+        글 작성이 완료되었습니다. 확인을 누르면 작성한 게시글로 이동합니다.
+      </div>
+    </div>
+    <div class="btn_area marginR1">
+      <button class="myButton">확인</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
