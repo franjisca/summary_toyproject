@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게시글보기</title>
+    <title>게시글 작성</title>
     <link rel="favicon_io" th:href="@{/favicon_io/favicon.ico}"/>
     <link rel="stylesheet" type="text/css" th:href="@{../css/stylesheet.css}"/>
 </head>
@@ -13,15 +14,15 @@
     <div class="articlearea">
         <h2>기사를 읽고 직접 정리해보아요.</h2>
         <div class="article">
-            <form>
+            <form th:action="@{/summary/write}" th:object="${summary}" method="post">
                 <div class="arc_title">
-                    <input type="text" required placeholder="제목을 입력하세요">
+                    <input type="text" name="title" required placeholder="제목을 입력하세요">
                 </div>
                 <hr/>
                 <div class="arc_contents">
-                    <input type="text" class="height35" required placeholder="내용을 입력하세요">
+                    <input type="text" class="height35" name="contents" required placeholder="내용을 입력하세요">
+                    <input hidden type="text" name="articleId" th:value="${articleId}"/>
                 </div>
-            </div>
             <div class="btn_area">
                 <button class="myButton" type="submit">작성</button>
             </div>
