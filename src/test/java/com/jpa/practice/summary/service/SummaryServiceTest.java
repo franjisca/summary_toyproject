@@ -47,7 +47,4 @@ class SummaryServiceTest {
 
     }
 
-    @Test
-    void delete() {
-    }
 }
