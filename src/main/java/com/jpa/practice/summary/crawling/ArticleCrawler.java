@@ -7,27 +7,46 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+
 
 public class ArticleCrawler{
-    private String url;
-    public Article workCrawler(String url) {
-        Article article = null;
+        private static Article article;
+        private static String title = "";
+        private static String contents = "";
+        private static LocalDateTime date;
+
+    public static Article workCrawler(String url) throws DateTimeParseException {
 
         Document doc;
 
+        // div class ="time_area" : 작성일
+        // h2 class ="news_ttl" : 제목
+        // div class = "news_cnt_detail_wrap": 내용
         try {
             doc = Jsoup.connect(url).get();
-            Elements data = doc.select("css class명이 올 곳");
 
-            for(Element one: data) {
-                // Article = data.xxx
-            }
+            date = LocalDateTime.parse(
+                    doc.
+                            selectFirst(".registration").
+                            text().
+                            replace("입력 : ", ""),
+                    DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+            );
 
+            // 기사 title
+            title = doc.getElementsByTag("title").text();
+
+            // 기사내용
+            contents = doc.getElementsByClass("news_cnt_detail_wrap").text();
 
         }catch (Exception e){
             e.printStackTrace();
         }
 
-        return article;
+        return new Article(title, contents, LocalDateTime.now());
     }
+
 }

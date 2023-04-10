@@ -33,6 +33,12 @@ public class Summary {
         this.createDate = createDate;
     }
 
+    public Summary(Article article, String title, String contents) {
+        this.article = article;
+        this.title = title;
+        this.contents = contents;
+    }
+
     public void update(Summary summary) {
         this.title = summary.getTitle();
         this.contents = summary.getContents();

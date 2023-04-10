@@ -14,15 +14,14 @@
         <div class="articlearea">
                 <h2>오늘의 세 줄 요약거리 </h2>
                 <div class="article">
-                    <div class="arc_title">"충격, 한지연씨 금요일날 공부를 안 해"</div>
+                    <div class="arc_title" th:text="${article.title}">이곳은 기사의 제목입니다.</div>
                     <hr/>
-                    <div class="arc_contents">
-                        2023년 4월 7일 오후 한지연씨는 공부를 하다 말고 로또를 사러 나간 뒤 그대로 
-                        코인 노래방으로 직행한 것이 확인되었다. 
+                    <div class="arc_contents" th:text="${article.contents}">
+                        이곳은 기사의 내용입니다.
                         <br/>
                     </div>
                 </div>
-                <div class="btn_area"><button class="myButton">요약하러 가기</button></div>
+                <div class="btn_area"><button class="myButton" th:onclick="|location.href='@{/summary/write(articleId=${article.id})}'|">요약하러 가기</button></div>
         </div>
 
  

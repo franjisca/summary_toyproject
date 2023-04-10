@@ -16,6 +16,8 @@ public class Article {
     private Long id;
 
     private String title;
+
+    @Column(length = 5000)
     private String contents;
     private LocalDateTime date;
 
