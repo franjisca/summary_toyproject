@@ -16,8 +16,9 @@ public class ArticleService {
     private final ArticleRepository articleRepository;
 
     @Transactional
-    public void save(Article article) {
+    public Long save(Article article) {
         articleRepository.save(article);
+        return article.getId();
     }
 
     public Article findOne(Long id){

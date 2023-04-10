@@ -1,10 +1,7 @@
 package com.jpa.practice.summary.domain;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
@@ -21,6 +18,10 @@ public class Article {
     private String title;
     private String contents;
     private LocalDateTime date;
+
+
+    // @OneToOne(mappedBy = "article", fetch = FetchType.LAZY)
+    // private Summary summary;
 
     public Article() {
     }

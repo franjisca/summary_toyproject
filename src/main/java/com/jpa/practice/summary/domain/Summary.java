@@ -34,7 +34,6 @@ public class Summary {
     }
 
     public void update(Summary summary) {
-        this.article = summary.getArticle();
         this.title = summary.getTitle();
         this.contents = summary.getContents();
     }
