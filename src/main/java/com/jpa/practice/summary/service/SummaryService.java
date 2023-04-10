@@ -30,8 +30,8 @@ public class SummaryService {
     }
 
     @Transactional
-    public void updateSummary(Summary updateSummary){
-       summaryRepository.updateSummary(updateSummary);
+    public void updateSummary(Long id,Summary updateSummary){
+       summaryRepository.updateSummary(id ,updateSummary);
     }
 
     @Transactional

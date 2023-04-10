@@ -27,8 +27,8 @@ public class SummaryRepository {
         return em.createQuery("select s from Summary s", Summary.class).getResultList();
     }
 
-    public void updateSummary(Summary updateSummary){
-        Summary findSummary = em.find(Summary.class, updateSummary.getId());
+    public void updateSummary(Long id, Summary updateSummary){
+        Summary findSummary = em.find(Summary.class, id);
         findSummary.update(updateSummary);
     }
 
