@@ -10,7 +10,7 @@
 - 메인페이지
 ![image](https://user-images.githubusercontent.com/96047335/231103495-48af0599-8da9-492c-b117-dce56b5647f7.png)
 
-- 요약글 작성하기
+- 요약글 작성, 수정하기
 ![image](https://user-images.githubusercontent.com/96047335/231103578-d793bc9c-087d-49ee-9176-dd79b3c26bb4.png)
 
 - 알림창
