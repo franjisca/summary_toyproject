@@ -6,3 +6,12 @@
 - 뷰 템플릿: 타임리프
 
 ![image](https://user-images.githubusercontent.com/96047335/231101050-3fcaa5bf-7070-42be-95ea-2ddb5eac3741.png)
+
+- 메인페이지
+![image](https://user-images.githubusercontent.com/96047335/231103495-48af0599-8da9-492c-b117-dce56b5647f7.png)
+
+- 요약글 작성하기
+![image](https://user-images.githubusercontent.com/96047335/231103578-d793bc9c-087d-49ee-9176-dd79b3c26bb4.png)
+
+- 알림창
+![image](https://user-images.githubusercontent.com/96047335/231103665-8e6bb7d2-b531-44fd-aba1-970e4c03d302.png)
