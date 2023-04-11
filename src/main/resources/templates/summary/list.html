@@ -13,15 +13,17 @@
     <div class="articlearea">
         <h2>내가 요약한 기사들</h2>
         <div class="article height83 over display">
-            <div class="board">
-                <div class="list_contents" onclick="">
-                    요약날짜: <br/>
-                    기사제목: <br/>
-                    요약내용: <br/>
+                <div class="board" th:each="summary: ${list}">
+                    <div class="list_contents"
+                         th:onclick="|location.href='@{/summary/view(summaryId=${summary.id})}'|">
+                        <th:block th:text="'요약날짜: ' + ${#temporals.format(summary.createDate, 'yyyy-MM-dd')}"></th:block><br/>
+                            <th:block th:text="'제목: ' + ${summary.title}"></th:block><br/>
+                                <th:block th:text="'요약 내용:' + ${summary.contents}"></th:block><br/>
+                    </div>
                 </div>
-                </div>
-            </div>
 
-</div>
+
+        </div>
+    </div>
 </body>
 </html>

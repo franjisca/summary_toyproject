@@ -18,7 +18,7 @@ public class HomeController {
     @GetMapping("/")
     public String main(Model model){
 
-        Article article = ArticleCrawler.workCrawler("https://www.mk.co.kr/news/world/10709057");
+        Article article = ArticleCrawler.workCrawler("https://www.mk.co.kr/news/it/10709311");
 
         Long saveId = articleService.save(article);
 

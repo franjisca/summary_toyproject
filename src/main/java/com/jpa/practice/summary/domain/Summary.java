@@ -39,6 +39,12 @@ public class Summary {
         this.contents = contents;
     }
 
+    public Summary(Long id, String title, String contents) {
+        this.id = id;
+        this.title = title;
+        this.contents = contents;
+    }
+
     public void update(Summary summary) {
         this.title = summary.getTitle();
         this.contents = summary.getContents();
