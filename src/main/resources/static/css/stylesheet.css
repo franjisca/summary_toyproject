@@ -12,6 +12,10 @@ hr {
     margin: 0 4% 0 4%;
 }
 
+img {
+    cursor: pointer;
+}
+
 input {
     border-radius: 5px;
     border: none;
@@ -21,6 +25,7 @@ input {
 }
 
 .logoname {
+    cursor: pointer;
     min-width: 5vw;
 }
 
@@ -176,6 +181,14 @@ input {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flow-root;
 
+}
+
+.warning {
+    background-color: #ff0000;
+}
+
+.warning:hover {
+    background-color: #c90000;
 }
 
 .message{

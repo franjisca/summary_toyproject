@@ -1,8 +1,9 @@
 <html lagn="ko" xmlns:th="http://www.thymeleaf.org">
 <div class="nav" th:fragment="navFragment">
-  <div
-  ><img alt="logo" src="../favicon_io/favicon-32x32.png"/><span class="logoname">세 줄 요약</span>
+  <div>
+    <img alt="logo" src="../favicon_io/favicon-32x32.png" th:onclick="|location.href='@{/}'|"/>
+    <span class="logoname" th:onclick="|location.href='@{/}'|">세 줄 요약</span>
   </div>
-  <button class="myButton" onclick="location.href=('/')">글목록</button>
+  <button class="myButton" th:onclick="|location.href='@{/summary/list}'|">글목록</button>
 </div>
 </html>

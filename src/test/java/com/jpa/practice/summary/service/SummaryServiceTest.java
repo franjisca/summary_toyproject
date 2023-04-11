@@ -2,6 +2,7 @@ package com.jpa.practice.summary.service;
 
 import com.jpa.practice.summary.domain.Article;
 import com.jpa.practice.summary.domain.Summary;
+import com.jpa.practice.summary.dto.SummaryDto;
 import com.jpa.practice.summary.repository.SummaryRepository;
 import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.Test;
@@ -30,8 +31,10 @@ class SummaryServiceTest {
 
         Article article = new Article("title", "contents", LocalDateTime.now());
         em.persist(article);
+        Long id = article.getId();
         Summary summary = new Summary(article, "title", "summary contents", LocalDateTime.now());
 
+        // Summary
         summaryService.save(summary);
 
         Summary updateSummary = new Summary(article, "title change", "summary contents change", LocalDateTime.now());

@@ -13,19 +13,19 @@
 <th:block th:insert="~{/fragments/nav :: navFragment}">
 </th:block>
     <div class="articlearea">
-        <h2>기사를 읽고 직접 정리해보아요.</h2>
+        <h2>작성한 내용을 수정하는 중이에요.</h2>
                 <div class="article">
-                     <form th:action="@{/summary/write}" th:object="${summary}" method="post">
+                     <form th:action="@{/summary/update}" th:object="${summary}" method="post">
                         <div class="arc_title">
-                            <input type="text" name="title" required placeholder="제목을 입력하세요"/>
+                            <input th:value="${summary.title}" type="text" name="title" required placeholder="제목을 입력하세요"/>
                         </div>
                         <hr/>
                         <div class="arc_contents">
-                            <input type="text" class="height35" name="contents" required placeholder="내용을 입력하세요"/>
-                            <input hidden type="text" name="articleId" th:value="${articleId}"/>
+                            <input th:value="${summary.contents}" type="text" class="height35" name="contents" required placeholder="내용을 입력하세요"/>
+                            <input hidden type="text" name="summaryId" th:value="${summary.id}"/>
                         </div>
                         <div class="btn_area">
-                        <button class="myButton" type="submit">작성</button>
+                        <button class="myButton" type="submit">수정</button>
                         </div>
                     </form>
 

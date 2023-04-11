@@ -46,7 +46,7 @@ public class ArticleCrawler{
             e.printStackTrace();
         }
 
-        return new Article(title, contents, LocalDateTime.now());
+        return new Article(title, contents, date);
     }
 
 }

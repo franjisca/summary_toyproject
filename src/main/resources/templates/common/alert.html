@@ -13,14 +13,27 @@
 <div class="alertarea">
   <div class="alert">
     <div class="message">
-      <div class="msgtxt">
+      <div class="msgtxt" th:text="${message.message}">
         글 작성이 완료되었습니다. 확인을 누르면 작성한 게시글로 이동합니다.
       </div>
     </div>
     <div class="btn_area marginR1">
-      <button class="myButton">확인</button>
+      <button class="myButton"
+              th:attr="class=${message.isWarning ? 'myButton warning' : 'myButton'}"
+              th:onclick="movePage()"
+      >확인</button>
     </div>
   </div>
 </div>
+
+<script th:inline="javascript">
+
+  function movePage() {
+    const page = [[ ${message.redirectUrl} ]];
+
+    location.href = page;
+  }
+
+</script>
 </body>
 </html>
