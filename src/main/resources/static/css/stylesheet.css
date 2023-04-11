@@ -163,6 +163,10 @@ input {
     margin: 1% 1% 1% 1%;
 }
 
+.width50 {
+    width: 50vw;
+}
+
 /* 알림창 */
 
 .alertarea{
