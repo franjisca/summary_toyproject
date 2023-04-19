@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "c37a0727-4db5-4bdd-b913-9ff839992811",
+		"name": "summary_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20825947"
+	},
+	"item": [
+		{
+			"name": "summary_write",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"articleId\":\"52\",\n    \"title\" : \"postman test\",\n    \"contents\" : \"postman test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/write",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"write"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crawling_article",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/article",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "summary_update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"summaryId\":\"352\",\n    \"title\" : \"change text\",\n    \"contents\" : \"change text\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "summary_delete",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/delete?summaryId=352",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "summaryId",
+							"value": "352"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "summary_view",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/view?summaryId=452",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"view"
+					],
+					"query": [
+						{
+							"key": "summaryId",
+							"value": "452"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "summary_list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
