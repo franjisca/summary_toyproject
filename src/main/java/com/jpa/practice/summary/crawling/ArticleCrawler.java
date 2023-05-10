@@ -1,11 +1,8 @@
 package com.jpa.practice.summary.crawling;
 
 import com.jpa.practice.summary.domain.Article;
-import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -41,6 +38,13 @@ public class ArticleCrawler{
 
             // 기사내용
             contents = doc.getElementsByClass("news_cnt_detail_wrap").text();
+
+            System.out.println(
+                    "title: " + title + "\n" +
+                    "date: " + date + "\n" +
+                    "contents: " + contents
+
+            );
 
         }catch (Exception e){
             e.printStackTrace();

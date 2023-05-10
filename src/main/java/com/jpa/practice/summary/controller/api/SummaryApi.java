@@ -1,6 +1,8 @@
 package com.jpa.practice.summary.controller.api;
 
 
+import com.jpa.practice.summary.controller.api.exception.CustomExistException;
+import com.jpa.practice.summary.controller.api.exception.CustomNotFoundException;
 import com.jpa.practice.summary.domain.Summary;
 import com.jpa.practice.summary.dto.SummaryDto;
 import com.jpa.practice.summary.service.ArticleService;
@@ -37,7 +39,7 @@ public class SummaryApi {
         return new SummaryResponse(summaryService.unitSummary(updateDto.getSummaryId()));
     }
 
-    @GetMapping("/delete")
+    // @GetMapping("/delete")
     public MessageJson deleteSummary(@RequestParam("summaryId") Long summaryId){
         summaryService.delete(summaryId);
         try {
@@ -52,10 +54,31 @@ public class SummaryApi {
         }
         return new MessageJson("성공적으로 삭제되었습니다.");
     }
+    @DeleteMapping("/delete")
+    public MessageJson deleteSummary2(@RequestParam("summaryId") Long summaryId){
+
+        summaryService.delete(summaryId);
+        try {
+        Summary summary = summaryService.unitSummary(summaryId);
+
+            if(summary != null){
+                throw new CustomExistException("삭제되지 않았습니다");
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return new MessageJson("성공적으로 삭제되었습니다.");
+    }
 
     @GetMapping("/view")
     public SummaryResponse viewSummary(@RequestParam("summaryId") Long summaryId){
         Summary summary = summaryService.unitSummary(summaryId);
+
+        if(summary == null){
+            throw  new CustomNotFoundException("데이터가 없습니다.");
+        }
+
         return new SummaryResponse(summary);
     }
 
