@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Entity
@@ -24,6 +26,9 @@ public class Article {
 
     // @OneToOne(mappedBy = "article", fetch = FetchType.LAZY)
     // private Summary summary;
+
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "article")
+    private Summary summary;
 
     public Article() {
     }
